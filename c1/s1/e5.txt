@@ -1,0 +1,17 @@
+Page 21
+
+Ben bitdiddle has invented a test to determine whether the interpreter he is faced with is using applicative-order evaluation of normal-order evaluation. He defines the following two procedures:
+
+(define (p) (p))
+
+(define (test x y)
+	(if (= x 0)
+		0
+		y))
+
+Then he evaluates the expression
+
+(test 0 (p))
+
+Answer:
+This test will cease to terminate with the substitution method of evaluation, as (p) is recursively defined. In other words, as soon as the program is executed (p) is replaced with (p), which is then replaced with (p), etc. As this never reduces, the program never terminates. However, (p) is never evaluated using applicative-order evaluation, as the first branch of the conditioning statement occurs first. 

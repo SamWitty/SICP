@@ -1,0 +1,8 @@
+Page 21
+
+Observe that our model of evaluation allows for combinations whose operators are compound expressions. Use this observation to describe the behavior of the following procedure:
+
+(define (a-plus-abs-b a b)
+	((if (> b 0) + -) a b)
+
+If b is greater than 0, add it to a. If b is less than 0, subtract it from a. This works because subtracting a negative number is equivalent to adding its absolute value.
