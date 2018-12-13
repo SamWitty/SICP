@@ -1,0 +1,3 @@
+Page 36
+
+Of the two procedures, the first is a recursive and the second is iterative, even though both are defined with recursive calls to the (+ a b) function. The reason the first one is recursive is because the (inc b) function "floats" while the (+ a b) function is being called. Therefore, the number of (inc b) calls in memory is proportional to the size of a. However, the second procedure only calls (inc b) within the (+ a b) function. Therefore, the arguments of (+ a b) are always fully evaluated, rather than generating a lienar chain of evaluations.
