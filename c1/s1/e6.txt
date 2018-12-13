@@ -1,0 +1,5 @@
+Page 25.
+
+Skipping long text.
+
+Answer: When Alyssa uses these functions to compute the square root it will fail to terminate via recursive calls to (sqrt-iter (improve guess x) x). Unlike the primitive (if predicate then-clause else-clause), new-if does not leverage the same exception to normal order evaluations. In other words, the interpretter evaluates every branch of the conditional statement before checking the truth value of the predicate. In our example, this means that even though the guess is good enough, the interpretter will continue to evaluate the else-clause branch, which recursively calls sqrt-iter.
